@@ -36,7 +36,7 @@ class cooler:
             return(3 * 10**-5 * 300**-1)
        
     def C2():
-        if kompressor_slukket:
+        if compressor_off:
             return(0 * 300**-1)
         else:
             return(8 * 10**-6 * 300**-1)
@@ -49,6 +49,9 @@ for n in range(8640):
     if n == 0:
         PTime = 3.65
     cooler(n, PTime)
+    doorChance= random.randrange(1,10)
+
+pass
 
 
 
