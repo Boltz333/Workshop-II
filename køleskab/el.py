@@ -21,9 +21,19 @@ class el:
                     Tid = row['Tid']  # Time is in the first column
                     Pris = row['Pris']  # Price is in the second column
                     #print(f"Time: {Tid}, Price: {Pris}")
+
+                    #calculation for the el price
                     i+=1
                     if my_cooler.compressor_on[i-1] == True:
                         cash += float(Pris)
+                    
+                    #this is the calculation for the food price
+                    if my_cooler.T[i -1] < 3.5:
+                        cash += 2.68942987047
+                    elif my_cooler.T[i -1] >= 6.5:
+                         cash += 0.96
+                         
+
                 
                 print(cash)
 
