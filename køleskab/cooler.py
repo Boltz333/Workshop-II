@@ -1,6 +1,6 @@
 import random
 import csv
-
+import el
 
 
 
@@ -28,6 +28,7 @@ class cooler:
 
 
     def C1(self):
+        #is the door open or closed
         doorChance = random.randrange(0,9)
         if doorChance == 1:
             return(3 * 10**-5)
@@ -45,26 +46,14 @@ class cooler:
             return(0 * 300** -1)
       
         
-      
-        
-        
-        
 
 
+'
 
+
+'
 if __name__ == "__main__":
-    # Open csv file
-    with open('elpris.csv', newline='', encoding='utf-8') as csvfile:
-        csvreader = csv.DictReader(csvfile)
-        
-        # Reading the header
-        header = next(csvreader)  # Skipping to next header
-
-        # Reading and processing each row
-        for row in csvreader:
-            Tid = row['Tid']  # Time is in the first column
-            Pris = row['Pris']  # Price is in the second column
-            #print(f"Time: {Tid}, Price: {Pris}")
+    el
 
     my_cooler = cooler()
     for i in range(8640):
