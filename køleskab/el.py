@@ -18,7 +18,7 @@ class el:
                 csvreader = csv.DictReader(csvfile)
                 cash = 0
                 i = -1
-
+                casharray = []
                 # Reading the header
                 header = next(csvreader)  # Skipping to next header
 
@@ -28,6 +28,7 @@ class el:
                     Pris = row['Pris']  # Price is in the second column
                     #print(f"Time: {Tid}, Price: {Pris}")
 
+                    
                     #calculation for the el price
                     i+=1
                     if my_cooler.compressor_on[i-1] == True:
@@ -38,9 +39,14 @@ class el:
                         cash += 2.68942987047
                     elif my_cooler.T[i -1] >= 6.5:
                          cash += 0.96
-                         
+                    
+                #    casharray.append(cash)
+                #print(len(casharray))
+                #for n in range(6480):
+                 #   casharray.pop(-1)
                 print(cash)
                 #plt.plot(my_cooler.T)
                 #plt.hist(my_cooler.T)
                 #plt.hist(my_cooler.doorChance)
+                #plt.plot(casharray)
                 #plt.show()
