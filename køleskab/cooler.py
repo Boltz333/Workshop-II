@@ -59,7 +59,7 @@ class cooler:
         [8e-06, 0.0]
 
         """
-        if Temp > 5.949: #dette er det den "smarte" løsning, da den fjernede flere kroner fra prisen end hvis man bare havde den "normale" løsning som var en starttal på 6.
+        if Temp > 5.949: #dette er det den "smarte" loesning, da den fjernede flere kroner fra prisen end hvis man bare havde den "normale" loessning som var en starttal på 6.
             self.compressor_on.append(True)
             #this turns the compressor on
             return(8 * 10**-6)
