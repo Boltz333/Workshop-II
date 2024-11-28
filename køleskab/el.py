@@ -1,7 +1,13 @@
 import cooler as cl
 import csv
-
+import matplotlib.pyplot as plt
+import numpy as np
+import doctest
 class el:
+    
+        """
+        this module is for calculating the price of the electricity and the food        
+        """
         if __name__ == "__main__":
             my_cooler = cl.cooler()
             for n in range(8640):
@@ -33,9 +39,8 @@ class el:
                     elif my_cooler.T[i -1] >= 6.5:
                          cash += 0.96
                          
-
-                
                 print(cash)
-
-                
-
+                #plt.plot(my_cooler.T)
+                #plt.hist(my_cooler.T)
+                #plt.hist(my_cooler.doorChance)
+                #plt.show()
